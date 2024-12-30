@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Your Study Plan</h1>
+    <ul>
+        {% for session in sessions %}
+        <li>
+            <strong>Goal:</strong> {{ session.goal }}<br>
+            <strong>Time:</strong> {{ session.time }} hours<br>
+            <strong>Technique:</strong> {{ session.technique }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

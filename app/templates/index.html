@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Session Planner</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Welcome to Study Session Planner</h1>
+    <form action="/dashboard" method="POST">
+        <label for="goal">Study Goal:</label>
+        <input type="text" id="goal" name="goal" required><br>
+        <label for="time">Available Time (hours):</label>
+        <input type="number" id="time" name="time" required><br>
+        <label for="technique">Preferred Study Technique:</label>
+        <select id="technique" name="technique">
+            <option value="Pomodoro">Pomodoro</option>
+            <option value="Focused Study">Focused Study</option>
+            <option value="Frequent Breaks">Frequent Breaks</option>
+        </select><br>
+        <button type="submit">Generate Plan</button>
+    </form>
+</body>
+</html>
